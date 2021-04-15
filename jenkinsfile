@@ -2,7 +2,7 @@ pipeline{
     //Directives
     agent any
     tools {
-        maven"maven2"
+        maven"Maven 2"
 
     }
 
