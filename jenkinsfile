@@ -22,6 +22,12 @@ pipeline{
             echo 'tesing'
         }
     }
+    //stage 3 : publish artifacts to Nexus
+    stage ('public to nexus'){
+        steps{
+            nexusArtifactUploader artifacts: [[artifactId: 'ShivamDevOpsLab', classifier: '', file: 'target/ShivamDevOpsLab-0.0.4-snapshot.war', type: 'war']], credentialsId: 'e7fc33f7-c1f9-4cb5-b391-164df7b70e15', groupId: 'com.Shivamdevopslab', nexusUrl: '172.20.10.232:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'Shivamdevopslab-snapshot', version: '0.0.4-snapshot'
+        }
+    }
 
     //stage 3 : Deploying
     stage('Deploy'){
