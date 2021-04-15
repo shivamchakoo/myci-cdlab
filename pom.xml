@@ -4,7 +4,7 @@
   <groupId>com.Shivamdevopslab</groupId>
   <artifactId>ShivamDevOpsLab</artifactId>
   <packaging>war</packaging>
-  <version>0.0.2-snapshot</version>
+  <version>0.0.3-snapshot</version>
   <name>ShivamDevOpsLab</name>
   <url>http://maven.apache.org</url>
   <dependencies>
