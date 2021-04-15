@@ -31,7 +31,7 @@ pipeline{
     //stage 3 : publish artifacts to Nexus
     stage ('public to nexus'){
         steps{
-            nexusArtifactUploader artifacts: [[artifactId: 'ShivamDevOpsLab', classifier: '', file: 'target/ShivamDevOpsLab-0.0.5-SNAPSHOT.war', type: 'war']], credentialsId: '54208af9-6286-4bee-bd4e-c87623e400d1', groupId: 'com.Shivamdevopslab', nexusUrl: '172.20.10.232:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ShivamDevOpsLab-SNAPSHOT', version: '0.0.5-SNAPSHOT'
+            nexusArtifactUploader artifacts: [[artifactId: '${ArtifactId}', classifier: '', file: 'target/ShivamDevOpsLab-0.0.5-SNAPSHOT.war', type: 'war']], credentialsId: '54208af9-6286-4bee-bd4e-c87623e400d1', groupId: '${GroupId}', nexusUrl: '172.20.10.232:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ShivamDevOpsLab-SNAPSHOT', version: '${Version}'
         }
     }
 
@@ -40,7 +40,7 @@ pipeline{
         steps{
             echo "Artifact ID is '${ArtifactId}'"
             echo "Version is '${Version}'"
-            echo "groupID is'${}'"
+            echo "groupID is'${Groupid}'"
             echo "name is '${Name}'"
 
         }
