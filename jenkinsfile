@@ -1,0 +1,34 @@
+pipeline{
+    //Directives
+    agent any
+    tools {
+        maven'maven'
+
+    }
+
+    stages {
+    // specify various stages
+
+    //stage 1. Build
+    stage ('Build'){
+        steps {
+            sh 'mvn clean install package'
+        }
+    }
+
+    //stage 2. Testing
+    stage ('Test'){
+        steps{
+            echo 'tesing'
+        }
+    }
+
+    //stage 3 : Deploying
+    stage('Deploy'){
+        steps{
+            echo 'deploying'
+        }
+
+    }
+    
+}
