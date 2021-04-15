@@ -9,6 +9,7 @@ pipeline{
         ArtifactId = readMavemPom().getArtifactId()
         Version = readMavemPom().getVersion()
         Name = readMavemPom().getName()
+        GroupId = readMavemPom().getGroupid()
     }
 
     stages {
