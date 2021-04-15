@@ -25,7 +25,7 @@ pipeline{
     //stage 3 : publish artifacts to Nexus
     stage ('public to nexus'){
         steps{
-            nexusArtifactUploader artifacts: [[artifactId: 'ShivamDevOpsLab', classifier: '', file: 'target/ShivamDevOpsLab-0.0.5-SNAPSHOT', type: 'war']], credentialsId: '54208af9-6286-4bee-bd4e-c87623e400d1', groupId: 'com.Shivamdevopslab', nexusUrl: '172.20.10.232:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ShivamDevOpsLab-SNAPSHOT', version: '0.0.5-SNAPSHOT'
+            nexusArtifactUploader artifacts: [[artifactId: 'ShivamDevOpsLab', classifier: '', file: 'target/ShivamDevOpsLab-0.0.5-SNAPSHOT.war', type: 'war']], credentialsId: '54208af9-6286-4bee-bd4e-c87623e400d1', groupId: 'com.Shivamdevopslab', nexusUrl: '3.134.81.255:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'ShivamDevOpsLab-SNAPSHOT', version: '0.0.5-SNAPSHOT'
         }
     }
 
