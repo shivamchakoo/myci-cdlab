@@ -39,7 +39,7 @@ pipeline{
         steps{
             echo "Artifact ID is '${ArtifactId}'"
             echo "Version is '${Version}'"
-            echo "groupID is'{}'"
+            echo "groupID is'{GroupId}'"
             echo "name is '${Name}'"
 
         }
